@@ -1,0 +1,367 @@
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Admin Dashboard</title>
+  </head>
+
+  <body>
+    <div class="container">
+
+      <!-- SIDEBAR -->
+      <aside class="sidebar">
+
+        <div class="logo">
+          <img src="img/dashboard.svg" alt="" />
+          <h2>Dashboard</h2>
+        </div>
+
+        <nav class="main-nav" aria-label="Main navigation">
+          <ul>
+            <li>
+              <a href="#">
+                <img src="img/home.svg" alt="" />
+                <span>Home</span>
+              </a>
+            </li>
+
+            <li>
+              <a href="#">
+                <img src="img/profile.svg" alt="" />
+                <span>Profile</span>
+              </a>
+            </li>
+
+            <li>
+              <a href="#">
+                <img src="img/message.svg" alt="" />
+                <span>Messages</span>
+              </a>
+            </li>
+
+            <li>
+              <a href="#">
+                <img src="img/history.svg" alt="" />
+                <span>History</span>
+              </a>
+            </li>
+
+            <li>
+              <a href="#">
+                <img src="img/tasks.svg" alt="" />
+                <span>Tasks</span>
+              </a>
+            </li>
+
+            <li>
+              <a href="#">
+                <img src="img/community.svg" alt="" />
+                <span>Communities</span>
+              </a>
+            </li>
+          </ul>
+        </nav>
+
+        <nav class="control-nav" aria-label="Settings navigation">
+          <ul>
+            <li>
+              <a href="#">
+                <img src="img/setting.svg" alt="" />
+                <span>Settings</span>
+              </a>
+            </li>
+
+            <li>
+              <a href="#">
+                <img src="img/support.svg" alt="" />
+                <span>Support</span>
+              </a>
+            </li>
+
+            <li>
+              <a href="#">
+                <img src="img/privacy.svg" alt="" />
+                <span>Privacy</span>
+              </a>
+            </li>
+          </ul>
+        </nav>
+
+      </aside>
+
+      <!-- MAIN CONTENT -->
+      <main class="content">
+
+        <!-- HEADER -->
+        <header class="header">
+
+          <!-- TOP HEADER -->
+          <div class="top-header">
+
+            <div class="search-container">
+              <img src="img/search.svg" alt="" />
+              <input type="search" aria-label="Search" />
+            </div>
+
+            <div class="user-info">
+              <button class="notification" aria-label="Notifications">
+                <img src="img/notification.svg" alt="" />
+              </button>
+
+              <img
+                class="user-avatar"
+                src="img/avatar.jpg"
+                alt="Morgan Oakley"
+              />
+
+              <h3>Morgan Oakley</h3>
+            </div>
+
+          </div>
+
+          <!-- WELCOME HEADER -->
+          <div class="welcome-header">
+
+            <div class="welcome-info">
+              <img
+                class="welcome-avatar"
+                src="img/avatar.jpg"
+                alt="Morgan Oakley"
+              />
+
+              <div class="welcome-text">
+                <p>Hi there,</p>
+                <h2>Morgan Oakley (@morgan)</h2>
+              </div>
+            </div>
+
+            <div class="header-buttons">
+              <button type="button">New</button>
+              <button type="button">Upload</button>
+              <button type="button">Share</button>
+            </div>
+
+          </div>
+
+        </header>
+
+        <!-- DASHBOARD CONTENT -->
+        <section class="main-content">
+
+          <!-- PROJECTS SECTION -->
+          <section class="projects-section">
+
+            <h2>Your Projects</h2>
+
+            <div class="project-grid">
+
+              <article class="project-card">
+                <div class="project-info">
+                  <h3>Super Cool Project</h3>
+                  <p>
+                    Sed tempus ut lacus ut scelerisque.
+                    Suspendisse sollicitudin nibh erat, id
+                    facilisis felis accumsan nec.
+                  </p>
+                </div>
+
+                <div class="project-actions">
+                  <button aria-label="Add to favourites">☆</button>
+                  <button aria-label="View project">◉</button>
+                  <button aria-label="Share project">♧</button>
+                </div>
+              </article>
+
+              <article class="project-card">
+                <div class="project-info">
+                  <h3>Less Cool Project</h3>
+                  <p>
+                    Nullam condimentum ipsum ut lectus vehicula
+                    consectetur. Quisque sed dolor tincidunt,
+                    consectetur sapien et, facilisis dolor.
+                    Duis sem purus, dignissim ut sapien in,
+                    varius pellentesque lacus.
+                  </p>
+                </div>
+
+                <div class="project-actions">
+                  <button aria-label="Add to favourites">☆</button>
+                  <button aria-label="View project">◉</button>
+                  <button aria-label="Share project">♧</button>
+                </div>
+              </article>
+
+              <article class="project-card">
+                <div class="project-info">
+                  <h3>Impossible App</h3>
+                  <p>
+                    In hac habitasse platea dictumst.
+                    Vivamus dictum rutrum arcu, a placerat
+                    velit sagittis id.
+                  </p>
+                </div>
+
+                <div class="project-actions">
+                  <button aria-label="Add to favourites">☆</button>
+                  <button aria-label="View project">◉</button>
+                  <button aria-label="Share project">♧</button>
+                </div>
+              </article>
+
+              <article class="project-card">
+                <div class="project-info">
+                  <h3>Easy Peasy App</h3>
+                  <p>
+                    Etiam cursus eros ac efficitur fringilla.
+                    Vestibulum dignissim urna eget accumsan
+                    aliquam. Curabitur dignissim nisi in
+                    tortor commodo, ac bibendum magna tincidunt.
+                  </p>
+                </div>
+
+                <div class="project-actions">
+                  <button aria-label="Add to favourites">☆</button>
+                  <button aria-label="View project">◉</button>
+                  <button aria-label="Share project">♧</button>
+                </div>
+              </article>
+
+              <article class="project-card">
+                <div class="project-info">
+                  <h3>Ad Blocker</h3>
+                  <p>
+                    Quisque eget rutrum nisl. Nam augue justo,
+                    cursus vitae metus vel, pharetra hendrerit
+                    felis. Aliquam sed malesuada eros.
+                  </p>
+                </div>
+
+                <div class="project-actions">
+                  <button aria-label="Add to favourites">☆</button>
+                  <button aria-label="View project">◉</button>
+                  <button aria-label="Share project">♧</button>
+                </div>
+              </article>
+
+              <article class="project-card">
+                <div class="project-info">
+                  <h3>Money Maker</h3>
+                  <p>
+                    Praesent convallis, libero quis congue
+                    elementum, nunc ante faucibus sapien, ac
+                    scelerisque tortor purus sit amet ex.
+                    Pellentesque mollis nec sem vel aliquam.
+                  </p>
+                </div>
+
+                <div class="project-actions">
+                  <button aria-label="Add to favourites">☆</button>
+                  <button aria-label="View project">◉</button>
+                  <button aria-label="Share project">♧</button>
+                </div>
+              </article>
+
+            </div>
+
+          </section>
+
+          <!-- RIGHT SIDEBAR -->
+          <aside class="right-sidebar">
+
+            <!-- ANNOUNCEMENTS -->
+            <section class="announcements-section">
+
+              <h2>Announcements</h2>
+
+              <div class="announcements-card">
+
+                <article class="announcement">
+                  <h4>Site Maintenance</h4>
+                  <p>
+                    Vestibulum condimentum tellus lacus,
+                    in accumsan elit maximus ac. Donec
+                    hendrerit sodales congue...
+                  </p>
+                </article>
+
+                <article class="announcement">
+                  <h4>Community Share Day</h4>
+                  <p>
+                    Nam vel lectus tincidunt, rutrum nulla
+                    eu, ornare libero. Aliquam dictum
+                    accumsan porttitor...
+                  </p>
+                </article>
+
+                <article class="announcement">
+                  <h4>Updated Privacy Policy</h4>
+                  <p>
+                    Phasellus efficitur elit eget consectetur,
+                    eget condimentum ante auctor. Cras
+                    fringilla sagittis sem in mattis...
+                  </p>
+                </article>
+
+              </div>
+
+            </section>
+
+            <!-- TRENDING -->
+            <section class="trending-section">
+
+              <h2>Trending</h2>
+
+              <div class="trending-card">
+
+                <article class="trending-user">
+                  <img src="img/tegan.jpg" alt="" />
+
+                  <div>
+                    <h4>@tegan</h4>
+                    <p>World Peace Builder</p>
+                  </div>
+                </article>
+
+                <article class="trending-user">
+                  <img src="img/avatar.jpg" alt="" />
+
+                  <div>
+                    <h4>@morgan</h4>
+                    <p>Super Cool Project</p>
+                  </div>
+                </article>
+
+                <article class="trending-user">
+                  <img src="img/kendall.jpg" alt="" />
+
+                  <div>
+                    <h4>@kendall</h4>
+                    <p>Life Changing App</p>
+                  </div>
+                </article>
+
+                <article class="trending-user">
+                  <img src="img/alex.jpg" alt="" />
+
+                  <div>
+                    <h4>@alex</h4>
+                    <p>No Traffic Maker</p>
+                  </div>
+                </article>
+
+              </div>
+
+            </section>
+
+          </aside>
+
+        </section>
+
+      </main>
+
+    </div>
+  </body>
+</html>

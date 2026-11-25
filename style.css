@@ -1,0 +1,590 @@
+
+/* =================================
+   1. GLOBAL STYLES
+================================= */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --primary-color: #1992d4;
+  --secondary-color: #f0b429;
+  --background-color: #e2e8f0;
+  --card-color: #ffffff;
+  --text-color: #111827;
+  --muted-color: #666666;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  color: var(--text-color);
+  background-color: var(--background-color);
+}
+
+button,
+input {
+  font: inherit;
+}
+
+button {
+  cursor: pointer;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+
+/* =================================
+   2. MAIN PAGE LAYOUT
+================================= */
+
+.container {
+  display: grid;
+  grid-template-columns: 310px minmax(0, 1fr);
+  min-height: 100vh;
+}
+
+
+/* =================================
+   3. SIDEBAR
+================================= */
+
+.sidebar {
+  background-color: var(--primary-color);
+  color: white;
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 55px;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  font-size: 25px;
+  font-weight: bold;
+}
+
+.logo img {
+  width: 38px;
+  height: 38px;
+  filter: brightness(0) invert(1);
+}
+
+.main-nav ul,
+.control-nav ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+.sidebar a {
+  display: flex;
+  align-items: center;
+  gap: 25px;
+  color: white;
+  text-decoration: none;
+  font-size: 22px;
+  font-weight: bold;
+  transition: opacity 0.2s ease;
+}
+
+.sidebar a:hover {
+  opacity: 0.75;
+}
+
+.sidebar a img {
+  width: 25px;
+  height: 25px;
+  filter: brightness(0) invert(1);
+}
+
+.control-nav {
+  margin-top: 0;
+}
+
+
+/* =================================
+   4. MAIN CONTENT
+================================= */
+
+.content {
+  min-width: 0;
+  display: grid;
+  grid-template-rows: auto 1fr;
+}
+
+
+/* =================================
+   5. HEADER
+================================= */
+
+.header {
+  background-color: white;
+  padding: 18px 45px 25px;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.15);
+  position: relative;
+  z-index: 1;
+}
+
+/* Top header */
+
+.top-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 30px;
+  margin-bottom: 35px;
+}
+
+.search-container {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  flex: 1;
+}
+
+.search-container img {
+  width: 22px;
+  height: 22px;
+}
+
+.search-container input {
+  width: 100%;
+  max-width: 620px;
+  height: 34px;
+  border: none;
+  outline: none;
+  border-radius: 30px;
+  background-color: var(--background-color);
+  padding: 0 15px;
+  font-size: 16px;
+}
+
+.user-info {
+  display: flex;
+  align-items: center;
+  gap: 25px;
+}
+
+.user-info h3 {
+  font-size: 18px;
+  white-space: nowrap;
+}
+
+.user-avatar {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.notification {
+  border: none;
+  background: none;
+}
+
+.notification img {
+  width: 25px;
+  height: 25px;
+}
+
+
+/* Welcome header */
+
+.welcome-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 25px;
+}
+
+.welcome-info {
+  display: flex;
+  align-items: center;
+  gap: 22px;
+}
+
+.welcome-avatar {
+  width: 76px;
+  height: 76px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.welcome-text p {
+  font-size: 14px;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.welcome-text h2 {
+  font-size: 23px;
+}
+
+.header-buttons {
+  display: flex;
+  align-items: center;
+  gap: 28px;
+}
+
+.header-buttons button {
+  background-color: var(--primary-color);
+  color: white;
+  border: none;
+  border-radius: 30px;
+  padding: 12px 32px;
+  font-size: 16px;
+  font-weight: bold;
+  min-width: 100px;
+  transition: background-color 0.2s ease;
+}
+
+.header-buttons button:hover {
+  background-color: #1176b0;
+}
+
+
+/* =================================
+   6. MAIN DASHBOARD AREA
+================================= */
+
+.main-content {
+  display: grid;
+  grid-template-columns: minmax(0, 2.5fr) minmax(240px, 1fr);
+  gap: 22px;
+  padding: 32px 34px;
+  align-items: start;
+  min-width: 0;
+}
+
+.main-content h2 {
+  font-size: 20px;
+  margin-bottom: 12px;
+}
+
+
+/* =================================
+   7. PROJECTS SECTION
+================================= */
+
+.projects-section {
+  min-width: 0;
+}
+
+.project-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 30px 25px;
+}
+
+.project-card {
+  background-color: var(--card-color);
+  border-radius: 9px;
+  border-left: 8px solid var(--secondary-color);
+  min-height: 223px;
+  padding: 35px 22px 20px;
+  box-shadow: 2px 3px 5px rgba(0, 0, 0, 0.15);
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.project-info h3 {
+  font-size: 18px;
+  margin-bottom: 5px;
+}
+
+.project-info p {
+  color: var(--muted-color);
+  font-size: 16px;
+  line-height: 1.25;
+}
+
+.project-actions {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 25px;
+  margin-top: 20px;
+}
+
+.project-actions button {
+  background: none;
+  border: none;
+  font-size: 26px;
+  font-weight: bold;
+  color: #333333;
+}
+
+.project-actions button:hover {
+  color: var(--primary-color);
+}
+
+
+/* =================================
+   8. RIGHT SIDEBAR
+================================= */
+
+.right-sidebar {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  min-width: 0;
+}
+
+
+/* =================================
+   9. ANNOUNCEMENTS
+================================= */
+
+.announcements-card {
+  background-color: white;
+  border-radius: 9px;
+  padding: 22px 25px;
+  box-shadow: 2px 3px 5px rgba(0, 0, 0, 0.15);
+}
+
+.announcement {
+  padding: 14px 7px;
+}
+
+.announcement:not(:last-child) {
+  border-bottom: 1px solid #cccccc;
+}
+
+.announcement h4 {
+  font-size: 14px;
+  margin-bottom: 4px;
+}
+
+.announcement p {
+  font-size: 12px;
+  color: var(--muted-color);
+  line-height: 1.2;
+}
+
+
+/* =================================
+   10. TRENDING
+================================= */
+
+.trending-card {
+  background-color: white;
+  border-radius: 9px;
+  padding: 20px 24px;
+  box-shadow: 2px 3px 5px rgba(0, 0, 0, 0.15);
+
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+.trending-user {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+}
+
+.trending-user img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.trending-user h4 {
+  font-size: 14px;
+  font-weight: normal;
+  margin-bottom: 3px;
+}
+
+.trending-user p {
+  color: var(--muted-color);
+  font-size: 14px;
+}
+
+
+/* =================================
+   11. RESPONSIVE DESIGN
+================================= */
+
+/* Tablets */
+
+@media (max-width: 1100px) {
+
+  .container {
+    grid-template-columns: 230px minmax(0, 1fr);
+  }
+
+  .sidebar {
+    padding: 22px 18px;
+  }
+
+  .sidebar a {
+    font-size: 17px;
+    gap: 15px;
+  }
+
+  .logo {
+    font-size: 21px;
+  }
+
+  .main-content {
+    grid-template-columns: 1fr;
+  }
+
+  .right-sidebar {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    align-items: start;
+    gap: 20px;
+  }
+
+  .header {
+    padding-left: 25px;
+    padding-right: 25px;
+  }
+
+  .header-buttons {
+    gap: 10px;
+  }
+
+  .header-buttons button {
+    padding: 10px 20px;
+    min-width: 80px;
+  }
+}
+
+
+/* Small tablets and large phones */
+
+@media (max-width: 700px) {
+
+  .container {
+    grid-template-columns: 1fr;
+  }
+
+  .sidebar {
+    padding: 15px;
+    gap: 20px;
+  }
+
+  .logo {
+    font-size: 20px;
+  }
+
+  .logo img {
+    width: 30px;
+    height: 30px;
+  }
+
+  .main-nav ul,
+  .control-nav ul {
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 15px 20px;
+  }
+
+  .sidebar a {
+    font-size: 14px;
+    gap: 7px;
+  }
+
+  .sidebar a img {
+    width: 19px;
+    height: 19px;
+  }
+
+  .header {
+    padding: 20px;
+  }
+
+  .top-header {
+    flex-wrap: wrap;
+    gap: 18px;
+  }
+
+  .search-container {
+    min-width: 100%;
+  }
+
+  .user-info {
+    margin-left: auto;
+  }
+
+  .welcome-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .welcome-avatar {
+    width: 55px;
+    height: 55px;
+  }
+
+  .welcome-text h2 {
+    font-size: 18px;
+  }
+
+  .header-buttons {
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  .header-buttons button {
+    flex: 1;
+    padding: 10px;
+  }
+
+  .main-content {
+    padding: 22px 16px;
+  }
+
+  .project-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .right-sidebar {
+    grid-template-columns: 1fr;
+  }
+}
+
+
+/* Small mobile screens */
+
+@media (max-width: 400px) {
+
+  .sidebar a {
+    font-size: 12px;
+  }
+
+  .sidebar a img {
+    width: 16px;
+    height: 16px;
+  }
+
+  .welcome-text h2 {
+    font-size: 16px;
+  }
+
+  .user-info {
+    gap: 12px;
+  }
+
+  .user-info h3 {
+    font-size: 14px;
+  }
+
+  .project-card {
+    padding: 25px 18px 18px;
+  }
+}
